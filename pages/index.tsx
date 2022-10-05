@@ -1,5 +1,8 @@
-import DogMainContainer from "../src/Components/Units/Main/DogMain.container";
 
-export default function MainPage() {
-  return <DogMainContainer />;
+export default function Home() {
+  return (
+   <>
+   <button>버튼이에요</button>
+   </>
+  );
 }
