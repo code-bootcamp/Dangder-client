@@ -1,131 +1,68 @@
-import { css } from "@emotion/react"
-
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 
 export const globalStyles = css`
+  html {
+    min-width: 300px;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    @media (min-width: 550px) {
+      font-size: 18px;
+    }
+    @media (max-width: 376px) {
+      font-size: 12px;
+    }
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    > div:first-child {
+      width: 100%;
+      height: 100%;
+      background-color: #d9d9d9;
+    }
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 16px;
   }
-  html,
-  body,
-  div,
-  span,
-  applet,
-  object,
-  iframe,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  blockquote,
-  pre,
-  a,
-  abbr,
-  acronym,
-  address,
-  big,
-  cite,
-  code,
-  del,
-  dfn,
-  em,
-  img,
-  ins,
-  kbd,
-  q,
-  s,
-  samp,
-  small,
-  strike,
-  sub,
-  sup,
-  tt,
-  var,
-  center,
-  dl,
-  dt,
-  dd,
-  ol,
-  ul,
-  li,
-  fieldset,
-  form,
-  label,
-  legend,
-  table,
-  caption,
-  tbody,
-  tfoot,
-  thead,
-  tr,
-  th,
-  td,
-  article,
-  aside,
-  canvas,
-  details,
-  embed,
-  figure,
-  figcaption,
-  footer,
-  header,
-  hgroup,
-  menu,
-  nav,
-  output,
-  ruby,
-  section,
-  summary,
-  time,
-  mark,
-  audio,
-  video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-  /* HTML5 display-role reset for older browsers */
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  hgroup,
-  menu,
-  nav,
-  section {
-    display: block;
-  }
-  body {
-    line-height: 1;
-  }
+
   ol,
   ul {
     list-style: none;
   }
-  blockquote,
-  q {
-    quotes: none;
-  }
-  blockquote:before,
-  blockquote:after,
-  q:before,
-  q:after {
-    content: "";
-    content: none;
-  }
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
   }
-  `;
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+`;
+
+export const Wrapper = styled.div`
+  max-width: 576px;
+  margin: 0 auto;
+  background-color: white;
+  height: 100%;
+`;
+
+export const MainColor = "#304FFE";
+export const SubColor = "#FDC500";
+export const GrayF5 = "#F5F5F5";
+export const Gray76 = "#767676";
+export const GrayD9 = "#D9D9D9";
